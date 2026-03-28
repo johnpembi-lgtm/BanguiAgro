@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BanguiAGRO | Rien ne se perd, tout se transforme</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#16a34a',
+                        secondary: '#eab308',
+                        accent: '#14532d',
+                        light: '#f0fdf4',
+                        dark: '#064e3b',
+                    },
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    animation: { 'spin-slow': 'spin 8s linear infinite' }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hidden-section { display: none !important; }
+        .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.2); }
+        .hero-pattern { background-image: radial-gradient(#16a34a 0.5px, transparent 0.5px); background-size: 24px 24px; }
+        body { scroll-behavior: smooth; }
+        .card-shadow { transition: all 0.3s ease; }
+        .card-shadow:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -15px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="bg-white text-dark font-sans">
+
+    <nav id="mainNav" class="glass border-b border-green-50/50 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3 cursor-pointer group" onclick="showPage('home')">
+                <div class="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center text-white font-black shadow-xl group-hover:rotate-12 transition-all">BA</div>
+                <span class="font-black text-2xl text-dark">BANGUI<span class="text-primary">AGRO</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 font-bold text-sm">
+                <a href="#home" class="hover:text-primary transition-all">Accueil</a>
+                <a href="#vision" class="hover:text-primary transition-all">Notre Vision</a>
+                <a href="#boutique" class="hover:text-primary transition-all">Boutique</a>
+                <a href="#service-desherbage" class="hover:text-primary transition-all">Désherbage</a>
+            </div>
+            <div class="flex items-center gap-4">
+
+                <a href="https://wa.me/23672843913" target="_blank" class="bg-primary text-white px-6 py-2 rounded-xl font-bold shadow-lg hover:scale-105 transition-all text-sm">
+                    <i class="fab fa-whatsapp mr-1"></i> WhatsApp
+                </a>
+                <a href="admin.html" class="text-slate-400 hover:text-accent px-4 py-2 rounded-xl font-bold text-sm hover:shadow-sm transition-all hidden lg:inline-flex items-center ml-2 opacity-70 hover:opacity-100">
+                    <i class="fas fa-shield-alt text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="homePage">
+        <section id="home" class="relative min-h-[85vh] flex items-center py-20 bg-light hero-pattern">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white text-primary font-black text-xs border shadow-sm uppercase tracking-widest">
+                        <i class="fa-solid fa-rotate animate-spin-slow"></i> Économie Circulaire RCA
+                    </div>
+                    <h1 class="text-6xl font-black leading-tight text-dark">
+                        Rien ne se perd, <br>
+                        <span class="text-primary block text-7xl -skew-x-6">Tout se transforme</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 max-w-lg leading-relaxed font-medium">
+                        BanguiAgro transforme les déchets en ressources. Nourrir la population, élever le bétail et produire de l'énergie propre.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#vision" class="bg-primary text-white px-10 py-5 rounded-2xl font-black shadow-xl hover:shadow-primary/30 transition-all">La Vision</a>
+                        <a href="#boutique" class="border-2 border-primary text-primary px-10 py-5 rounded-2xl font-bold hover:bg-primary hover:text-white transition-all">Nos Produits</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="w-full h-[500px] bg-slate-200 rounded-[4rem] shadow-2xl overflow-hidden border-[12px] border-white rotate-2">
+                        <img src="image/fresh-grass-background-with-soft-even-lighting-grass-natural-landscape-background_1020697-735533.avif" alt="Agriculture" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-secondary text-dark p-8 rounded-3xl shadow-2xl font-black -rotate-3">
+                        <p class="text-3xl">100%</p>
+                        <p class="text-xs uppercase tracking-widest text-dark/70">Bio & Circulaire</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vision" class="py-24 bg-white relative">
+            <div class="max-w-7xl mx-auto px-6 text-center mb-20">
+                <h2 class="text-4xl font-black text-dark mb-4">La Vision BanguiAgro</h2>
+                <p class="text-xl text-slate-500 font-medium italic">Un cycle de production local et durable.</p>
+                <div class="grid md:grid-cols-3 gap-8 mt-16 relative">
+                    <div class="bg-light p-10 rounded-[3rem] border border-primary/10 card-shadow text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6"><i class="fa-solid fa-leaf"></i></div>
+                        <h3 class="text-xl font-black mb-4 uppercase">1. Désherbage</h3>
+                        <p class="text-sm text-slate-600 font-medium leading-loose">On récolte l'herbe sans brûler pour protéger le sol et récupérer la biomasse.</p>
+                    </div>
+                    <div class="bg-emerald-50 p-10 rounded-[3rem] border border-primary/10 card-shadow text-center">
+                        <div class="w-16 h-16 bg-secondary text-white rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6"><i class="fa-solid fa-cow"></i></div>
+                        <h3 class="text-xl font-black mb-4 uppercase">2. Aliments</h3>
+                        <p class="text-sm text-slate-600 font-medium leading-loose">Les herbes et résidus de récolte (maïs, arachide) nourrissent l'élevage local.</p>
+                    </div>
+                    <div class="bg-dark p-10 rounded-[3rem] text-white card-shadow text-center shadow-2xl">
+                        <div class="w-16 h-16 bg-white text-dark rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6"><i class="fa-solid fa-fire"></i></div>
+                        <h3 class="text-xl font-black mb-4 uppercase">3. Énergie</h3>
+                        <p class="text-sm text-slate-300 font-medium leading-loose">Les déchets ultimes deviennent du Charbon Écologique Wâ sans fumée.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="service-desherbage" class="py-24 bg-emerald-50">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="bg-white rounded-[3rem] p-10 shadow-2xl border border-emerald-100">
+                    <div class="text-center mb-10">
+                        <div class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+                            <i class="fa-solid fa-scissors"></i>
+                        </div>
+                        <h2 class="text-3xl font-black text-dark">Devis Désherbage</h2>
+                        <p class="text-emerald-600 font-bold uppercase tracking-widest text-xs">Lekengo Yaka - Sans Brulis</p>
+                    </div>
+                    <form id="weedForm" class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <label class="block font-bold text-xs text-slate-400 uppercase">Infos Terrain</label>
+                            <select name="terrain_type" required class="w-full p-5 bg-slate-50 rounded-2xl border-none outline-none font-bold">
+                                <option>Petit terrain (<100m²)</option>
+                                <option>Terrain moyen (100-500m²)</option>
+                                <option>Grand champ (>500m²)</option>
+                            </select>
+                            <input type="text" name="location" required placeholder="Quartier / Localisation" class="w-full p-5 bg-slate-50 rounded-2xl border-none outline-none font-bold">
+                        </div>
+                        <div class="space-y-4">
+                            <label class="block font-bold text-xs text-slate-400 uppercase">Contact</label>
+                            <input type="tel" name="phone" required placeholder="WhatsApp (+236)" class="w-full p-5 bg-slate-50 rounded-2xl border-none outline-none font-bold">
+                            <textarea name="details" placeholder="Urgence ou type d'herbe..." class="w-full p-5 bg-slate-50 rounded-2xl border-none outline-none font-bold h-32"></textarea>
+                        </div>
+                        <button type="submit" class="md:col-span-2 w-full bg-dark text-white py-5 rounded-2xl font-black uppercase shadow-xl hover:bg-primary transition-all">Envoyer la demande</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="boutique" class="py-24">
+            <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+                <h2 class="text-4xl font-black mb-4">Nos Produits</h2>
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="bg-white p-6 rounded-[2.5rem] shadow-lg border border-slate-50 hover:-translate-y-2 transition-all">
+                        <img src="image/maÏs" class="w-full h-48 object-cover rounded-3xl mb-6">
+                        <h3 class="text-xl font-black mb-2">Djö Maïs</h3>
+                        <p class="text-primary font-black text-2xl">10 000 F <span class="text-xs text-slate-400">/ 50kg</span></p>
+                        <a href="#commande" class="mt-4 block bg-slate-100 py-3 rounded-xl font-bold hover:bg-primary hover:text-white transition-all">Acheter</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-[2.5rem] shadow-lg border border-slate-50 hover:-translate-y-2 transition-all">
+                        <img src="image/Arachide-Informations-sur-la-plante-histoire-utilisations-et-valeur-nutritionnelle.2 (1).jpg" class="w-full h-48 object-cover rounded-3xl mb-6">
+                        <h3 class="text-xl font-black mb-2">Karako Arachide</h3>
+                        <p class="text-primary font-black text-2xl">12 000 F <span class="text-xs text-slate-400">/ 25kg</span></p>
+                        <a href="#commande" class="mt-4 block bg-slate-100 py-3 rounded-xl font-bold hover:bg-primary hover:text-white transition-all">Acheter</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-[2.5rem] shadow-lg border border-slate-50 hover:-translate-y-2 transition-all">
+                        <img src="image/charbon.webp" class="w-full h-48 object-cover rounded-3xl mb-6">
+                        <h3 class="text-xl font-black mb-2">Wâ Écologique</h3>
+                        <p class="text-primary font-black text-2xl">3 500 F <span class="text-xs text-slate-400">/ 10kg</span></p>
+                        <a href="#commande" class="mt-4 block bg-slate-100 py-3 rounded-xl font-bold hover:bg-primary hover:text-white transition-all">Acheter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="commande" class="py-24 bg-slate-900 text-white">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black mb-4">Commande Rapide</h2>
+                    <p class="text-slate-400">Livraison partout à Bangui</p>
+                </div>
+                <form id="orderForm" class="grid md:grid-cols-2 gap-6 text-dark">
+                    <input type="text" name="name" required placeholder="Votre Nom" class="w-full p-5 bg-white/10 text-white rounded-2xl border border-white/20 font-bold outline-none">
+                    <input type="tel" name="phone" required placeholder="WhatsApp (+236)" class="w-full p-5 bg-white/10 text-white rounded-2xl border border-white/20 font-bold outline-none">
+                    <textarea name="details" required placeholder="Produits et quantités..." class="md:col-span-2 w-full p-5 bg-white/10 text-white rounded-2xl border border-white/20 font-bold h-32 outline-none"></textarea>
+                    <button type="submit" class="md:col-span-2 w-full bg-primary text-white py-5 rounded-2xl font-black text-xl uppercase shadow-2xl hover:bg-green-500">Confirmer</button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="bg-white border-t border-slate-100 pt-20 pb-10">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-12 mb-16">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-black">BA</div>
+                            <span class="font-black text-xl text-dark uppercase">BanguiAgro</span>
+                        </div>
+                        <p class="text-slate-500 font-medium">Leader de l'économie circulaire en République Centrafricaine. Rien ne se perd, tout se transforme.</p>
+                    </div>
+                    <div class="font-bold text-slate-500">
+                        <h4 class="text-dark uppercase text-xs mb-6 tracking-widest">Navigation</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#vision" class="hover:text-primary">Vision</a></li>
+                            <li><a href="#boutique" class="hover:text-primary">Boutique</a></li>
+                            <li><a href="#service-desherbage" class="hover:text-primary">Désherbage</a></li>
+                        </ul>
+                    </div>
+                    <div class="font-bold text-slate-500">
+                        <h4 class="text-dark uppercase text-xs mb-6 tracking-widest">Contact</h4>
+                        <p>Bangui, RCA</p>
+                        <p>+236 75 84 39 13</p>
+                    </div>
+                </div>
+                <div class="pt-8 border-t border-slate-50 text-center text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-loose">
+                    © 2026 BanguiAgro | Conçu par l'excellence IT Centrafricaine
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+
+    <script type="module">
+    import { firebaseConfig } from './firebase-config.js';
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // Envoi Désherbage
+    document.getElementById('weedForm')?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const fd = new FormData(e.target);
+        try {
+            await addDoc(collection(db, "devis_desherbage"), {
+                client: fd.get('location'),
+                surface: fd.get('terrain_type'),
+                contact: fd.get('phone'),
+                message: fd.get('details'),
+                date: serverTimestamp()
+            });
+            alert("✅ Demande de désherbage envoyée !");
+            e.target.reset();
+        } catch (err) { alert("Erreur d'envoi"); }
+    });
+
+    // Envoi Commande Produits
+    document.getElementById('orderForm')?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const fd = new FormData(e.target);
+        try {
+            await addDoc(collection(db, "commandes"), {
+                client: fd.get('name'),
+                contact: fd.get('phone'),
+                details: fd.get('details'),
+                statut: "En attente",
+                date: serverTimestamp()
+            });
+            alert("✅ Commande enregistrée !");
+            e.target.reset();
+        } catch (err) { alert("Erreur d'envoi"); }
+    });
+</script>
+</body>
+</html>
