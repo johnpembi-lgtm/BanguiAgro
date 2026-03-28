@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "banguiagro"
-  }
+    "default": "banguiagro",
+    "k": "banguiagro"
+  },
+  "targets": {},
+  "etags": {}
 }
